@@ -28,13 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnGenerarPDF = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tmpTxt = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // btnGenerarPDF
+            // 
+            this.btnGenerarPDF.Location = new System.Drawing.Point(257, 426);
+            this.btnGenerarPDF.Name = "btnGenerarPDF";
+            this.btnGenerarPDF.Size = new System.Drawing.Size(115, 23);
+            this.btnGenerarPDF.TabIndex = 1;
+            this.btnGenerarPDF.Text = "GENERAR PDF";
+            this.btnGenerarPDF.UseVisualStyleBackColor = true;
+            this.btnGenerarPDF.Click += new System.EventHandler(this.btnGenerarPDF_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(244, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "CTRL + V Para obtener texto de imagen recortada";
+            // 
+            // tmpTxt
+            // 
+            this.tmpTxt.AcceptsTab = true;
+            this.tmpTxt.Font = new System.Drawing.Font("Consolas", 10F);
+            this.tmpTxt.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tmpTxt.Location = new System.Drawing.Point(15, 25);
+            this.tmpTxt.Multiline = true;
+            this.tmpTxt.Name = "tmpTxt";
+            this.tmpTxt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tmpTxt.Size = new System.Drawing.Size(357, 353);
+            this.tmpTxt.TabIndex = 4;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.tmpTxt);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnGenerarPDF);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Impresora de Comprobantes";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+        private System.Windows.Forms.Button btnGenerarPDF;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tmpTxt;
     }
 }
 
